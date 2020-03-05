@@ -1,0 +1,49 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="2/12/2020 6:23:19 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="RAULRIBEIRO"
+  DTS:CreatorName="RAULRIBEIRO\lolly"
+  DTS:DTSID="{82E54171-27FF-4894-B38E-3B2ED96A4293}"
+  DTS:EnableConfig="True"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="15.0.2000.71"
+  DTS:LocaleID="1033"
+  DTS:ObjectName="Package1"
+  DTS:PackageType="5"
+  DTS:VersionBuild="1"
+  DTS:VersionGUID="{5F69C01E-5ED6-47F8-B769-9DA01553CF7A}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[RAULRIBEIRO\RAULMOTASQL.SSIS_PDS]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{44905DAA-956F-40EF-B3D5-2E7177A4FF56}"
+      DTS:ObjectName="RAULRIBEIRO\RAULMOTASQL.SSIS_PDS">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=RAULRIBEIRO\RAULMOTASQL;Initial Catalog=SSIS_PDS;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Configurations>
+    <DTS:Configuration
+      DTS:ConfigurationString="SSIS_PDS_CONFIG_FILE"
+      DTS:ConfigurationType="5"
+      DTS:CreationName=""
+      DTS:DTSID="{E13C50A9-9DED-4DFF-A452-514B4DB8E12E}"
+      DTS:ObjectName="XML Configuration" />
+  </DTS:Configurations>
+  <DTS:Variables />
+  <DTS:Executables />
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
