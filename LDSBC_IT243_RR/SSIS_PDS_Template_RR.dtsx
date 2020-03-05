@@ -1,4 +1,4 @@
-<?xml version="1.0"?>
+﻿<?xml version="1.0"?>
 <DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
   DTS:refId="Package"
   DTS:CreationDate="2/10/2020 6:46:03 PM"
@@ -12,11 +12,35 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="14"
-  DTS:VersionGUID="{B7FAA1A9-013C-4AAB-A9EF-4139743ED860}">
+  DTS:VersionBuild="15"
+  DTS:VersionGUID="{E5DDA124-A82F-4CFD-A400-10C739D267D0}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[RAULRIBEIRO\RAULMOTASQL.DFNB3]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{B54E544D-14AB-4A1B-9A68-B238D05E1E47}"
+      DTS:ObjectName="RAULRIBEIRO\RAULMOTASQL.DFNB3">
+      <DTS:PropertyExpression
+        DTS:Name="ConnectionString">@[User::conn_DFNB3]</DTS:PropertyExpression>
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=RAULRIBEIRO\RAULMOTASQL;Initial Catalog=DFNB;Provider=SQLNCLI11;Integrated Security=SSPI;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[RAULRIBEIRO\RAULMOTASQL.EXM]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{CE0BCF60-4A27-42FE-A29E-FEAFDDDC2B10}"
+      DTS:ObjectName="RAULRIBEIRO\RAULMOTASQL.EXM">
+      <DTS:PropertyExpression
+        DTS:Name="ConnectionString">@[User::conn_EXM]</DTS:PropertyExpression>
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=RAULRIBEIRO\RAULMOTASQL;Initial Catalog=EXM;Provider=SQLNCLI11;Integrated Security=SSPI;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
     <DTS:ConnectionManager
       DTS:refId="Package.ConnectionManagers[SSIS_PDS]"
       DTS:CreationName="OLEDB"
@@ -24,7 +48,7 @@
       DTS:ObjectName="SSIS_PDS">
       <DTS:ObjectData>
         <DTS:ConnectionManager
-          DTS:ConnectionString="Data Source=RAULRIBEIRO\RAULMOTASQL;Initial Catalog=SSIS_PDS;Provider=SQLNCLI11;Integrated Security=SSPI;Auto Translate=False;" />
+          DTS:ConnectionString="Data Source=RAULRIBEIRO\RAULMOTASQL;Initial Catalog=SSIS_PDS;Provider=SQLNCLI11;Integrated Security=SSPI;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
   </DTS:ConnectionManagers>
@@ -69,6 +93,33 @@
       DTS:ObjectName="BatchLogID">
       <DTS:VariableValue
         DTS:DataType="3">0</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{0EF73B51-A16A-46FF-9035-52DF6CB0D13F}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="conn_DFNB3">
+      <DTS:VariableValue
+        DTS:DataType="8">Data Source=RAULRIBEIRO\RAULMOTASQL;Initial Catalog=DFNB;Provider=SQLNCLI11;Integrated Security=SSPI;</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{218E5177-CAD2-4378-ADE7-91BEFA47766F}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="conn_EXM">
+      <DTS:VariableValue
+        DTS:DataType="8">Data Source=RAULRIBEIRO\RAULMOTASQL;Initial Catalog=EXM;Provider=SQLNCLI11;Integrated Security=SSPI;</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{277F0630-9164-4157-A49E-C4E3C3167AB2}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="conn_SSIS_PDS">
+      <DTS:VariableValue
+        DTS:DataType="8">Data Source=RAULRIBEIRO\RAULMOTASQL;Initial Catalog=SSIS_PDS;Provider=SQLNCLI11;Integrated Security=SSPI;</DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
@@ -804,6 +855,26 @@ Partial Friend NotInheritable Class MySettings
     End Property
 End Class]]></ProjectItem>
               <ProjectItem
+                Name="Project"
+                Encoding="UTF16LE"><![CDATA[<?xml version="1.0" encoding="UTF-16" standalone="yes"?>
+<c:Project xmlns:c="http://schemas.microsoft.com/codeprojectml/2010/08/main" xmlns:msb="http://schemas.microsoft.com/developer/msbuild/2003" runtimeVersion="3.0" schemaVersion="1.0">
+  <msb:PropertyGroup>
+    <msb:Language>msBuild</msb:Language>
+    <msb:CodeName>ST_8f5d372f3aed4822b004cfbf4a92e808</msb:CodeName>
+    <msb:DisplayName>ST_8f5d372f3aed4822b004cfbf4a92e808</msb:DisplayName>
+    <msb:ProjectId>{7807C6BE-4C9C-491B-BCBB-A2B9AC9C74E6}</msb:ProjectId>
+  </msb:PropertyGroup>
+  <msb:ItemGroup>
+    <msb:Project Include="ST_8f5d372f3aed4822b004cfbf4a92e808.vbproj" />
+    <msb:File Include="ScriptMain.vb" />
+    <msb:File Include="My Project\Resources.resx" />
+    <msb:File Include="My Project\AssemblyInfo.vb" />
+    <msb:File Include="My Project\Resources.Designer.vb" />
+    <msb:File Include="My Project\Settings.settings" />
+    <msb:File Include="My Project\Settings.Designer.vb" />
+  </msb:ItemGroup>
+</c:Project>]]></ProjectItem>
+              <ProjectItem
                 Name="ST_8f5d372f3aed4822b004cfbf4a92e808.vbproj"
                 Encoding="UTF8"><![CDATA[<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
@@ -902,26 +973,6 @@ End Class]]></ProjectItem>
     </VisualStudio>
   </ProjectExtensions>
 </Project>]]></ProjectItem>
-              <ProjectItem
-                Name="Project"
-                Encoding="UTF16LE"><![CDATA[<?xml version="1.0" encoding="UTF-16" standalone="yes"?>
-<c:Project xmlns:c="http://schemas.microsoft.com/codeprojectml/2010/08/main" xmlns:msb="http://schemas.microsoft.com/developer/msbuild/2003" runtimeVersion="3.0" schemaVersion="1.0">
-  <msb:PropertyGroup>
-    <msb:Language>msBuild</msb:Language>
-    <msb:CodeName>ST_8f5d372f3aed4822b004cfbf4a92e808</msb:CodeName>
-    <msb:DisplayName>ST_8f5d372f3aed4822b004cfbf4a92e808</msb:DisplayName>
-    <msb:ProjectId>{7807C6BE-4C9C-491B-BCBB-A2B9AC9C74E6}</msb:ProjectId>
-  </msb:PropertyGroup>
-  <msb:ItemGroup>
-    <msb:Project Include="ST_8f5d372f3aed4822b004cfbf4a92e808.vbproj" />
-    <msb:File Include="ScriptMain.vb" />
-    <msb:File Include="My Project\Resources.resx" />
-    <msb:File Include="My Project\AssemblyInfo.vb" />
-    <msb:File Include="My Project\Resources.Designer.vb" />
-    <msb:File Include="My Project\Settings.settings" />
-    <msb:File Include="My Project\Settings.Designer.vb" />
-  </msb:ItemGroup>
-</c:Project>]]></ProjectItem>
               <ProjectItem
                 Name="My Project\Resources.resx"
                 Encoding="UTF8"><![CDATA[<?xml version="1.0" encoding="utf-8"?>
@@ -1356,7 +1407,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
         <ContainerLayout
           HeaderHeight="43"
           IsExpanded="True"
-          PanelSize="478,102"
+          PanelSize="478,103"
           Size="478,146"
           Id="Package\Sequence Container\Test Connection Managers"
           TopLeft="5.50000000000006,5.49999999999989" />
@@ -1462,7 +1513,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
     design-time-name="Package.EventHandlers[OnVariableValueChanged]">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="134,42"
           Id="Package.EventHandlers[OnVariableValueChanged]\Script Task"
@@ -1490,7 +1541,9 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
