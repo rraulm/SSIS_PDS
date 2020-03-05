@@ -65,11 +65,38 @@ Connect strings are loaded with passwords to allow for automation of SSIS ETL ba
     VALUES
           (
            'CommonConfigurations'
-         , 'Data Source=localhost;Initial Catalog=EXM;Provider=SQLNCLI11;Integrated Security=SSPI;'
+         , 'Data Source=RAULRIBEIRO\RAULMOTASQL;Initial Catalog=EXM;Provider=SQLNCLI11;Integrated Security=SSPI;'
          , '\Package.Variables[User::conn_EXM].Properties[Value]'
          , 'String'
           );
 
+		  -- 1.2) conn_DFNB
+
+    INSERT INTO dbo.[SSIS Configurations](ConfigurationFilter
+                                        , ConfiguredValue
+                                        , PackagePath
+                                        , ConfiguredValueType)
+    VALUES
+          (
+           'CommonConfigurations'
+         , 'Data Source=RAULRIBEIRO\RAULMOTASQL;Initial Catalog=DFNB;Provider=SQLNCLI11;Integrated Security=SSPI;'
+         , '\Package.Variables[User::conn_DFNB].Properties[Value]'
+         , 'String'
+          );
+
+		  -- 1.3) conn_SSIS_PDS
+
+    INSERT INTO dbo.[SSIS Configurations](ConfigurationFilter
+                                        , ConfiguredValue
+                                        , PackagePath
+                                        , ConfiguredValueType)
+    VALUES
+          (
+           'CommonConfigurations'
+         , 'Data Source=RAULRIBEIRO\RAULMOTASQL;Initial Catalog=SSIS_PDS;Provider=SQLNCLI11;Integrated Security=SSPI;'
+         , '\Package.Variables[User::conn_SSIS_PDS].Properties[Value]'
+         , 'String'
+          );
 
 
 
@@ -79,10 +106,10 @@ Connect strings are loaded with passwords to allow for automation of SSIS ETL ba
     -- 2) Solution Level Configurations
 
 
-    -- 2.1) LDSBC_IT243_bf
+    -- 2.1) LDSBC_IT243_RR
 	
     DELETE FROM dbo.[SSIS Configurations]
-     WHERE ConfigurationFilter = 'LDSBC_IT243_bf';
+     WHERE ConfigurationFilter = 'LDSBC_IT243_RR';
 	
 
 	-- 2.1.1) v_data_share_root
@@ -93,8 +120,8 @@ Connect strings are loaded with passwords to allow for automation of SSIS ETL ba
                                         , ConfiguredValueType)
     VALUES
           (
-           'LDSBC_IT243_bf'
-		 , 'C:\Users\brunodifreitas\Desktop\GIT Repository\DFNB_src\txt_files\'
+           'LDSBC_IT243_RR'
+		 , 'C:\Repos\DFNB_src\txt_files\'
          , '\Package.Variables[User::v_data_share_root].Properties[Value]'
          , 'String'
           );
