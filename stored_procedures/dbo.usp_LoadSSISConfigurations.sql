@@ -28,6 +28,8 @@ Ver      Date        Author           Description
 -------  ----------  ---------------  ------------------------------------------------------------------------
 1.0      11/03/2019  JJAUSSI          1. Created this process for LDS BC IT243
 1.1      11/09/2019  JJAUSSI          1. Added conn_DFNB3
+1.2      11/09/2019  JJAUSSI          1. Added LoadDFNB3_RR configuration
+1.3      04/06/2020  JJAUSSI          1. Added LoadEXM_RR configuration
 
 
 
@@ -138,7 +140,7 @@ Connect strings are loaded with passwords to allow for automation of SSIS ETL ba
     -- 3.1) SSIS_PDS_Template
 
     DELETE FROM dbo.[SSIS Configurations]
-     WHERE ConfigurationFilter = 'SSIS_PDS_Template';
+     WHERE ConfigurationFilter = 'LoadDFNB3_RR';
 	
 
 	-- 3.1.1) v_data_share_root
@@ -155,6 +157,26 @@ Connect strings are loaded with passwords to allow for automation of SSIS ETL ba
          , 'String'
           );
 
+
+		   -- 3.3) LoadEXM_RR
+
+    DELETE FROM dbo.[SSIS Configurations]
+     WHERE ConfigurationFilter = 'LoadEXM_RR';
+	
+
+	-- 3.1.1) v_data_share_root
+
+    INSERT INTO dbo.[SSIS Configurations](ConfigurationFilter
+                                        , ConfiguredValue
+                                        , PackagePath
+                                        , ConfiguredValueType)
+    VALUES
+          (
+           'LoadEXM_RR'
+		 , 'C:\Repos\EXM\txt_files\'
+         , '\Package.Variables[User::v_data_share_root].Properties[Value]'
+         , 'String'
+          );
 
 END;
 
