@@ -2,18 +2,23 @@
 <BuildLog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <ProjectInfo>
     <Name>LDSBC_IT243_RR</Name>
-    <LastWriteTime>2020-03-05T02:06:30.732523Z</LastWriteTime>
+    <LastWriteTime>2020-04-06T22:10:40.9328595Z</LastWriteTime>
     <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
   </ProjectInfo>
   <LastBuildInfos>
     <ProjectBuildItemInfo>
       <Name>SSIS_PDS_Template_RR.dtsx</Name>
-      <LastWriteTime>2020-03-05T02:06:30.7045974Z</LastWriteTime>
+      <LastWriteTime>2020-03-05T02:43:24.835071Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>DoorDash.dtsx</Name>
       <LastWriteTime>2020-02-13T01:45:36.6553077Z</LastWriteTime>
+      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
+    </ProjectBuildItemInfo>
+    <ProjectBuildItemInfo>
+      <Name>LoadDFNB3_RR.dtsx</Name>
+      <LastWriteTime>2020-04-06T22:11:55.775516Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
   </LastBuildInfos>
